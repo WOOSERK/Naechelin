@@ -1,6 +1,8 @@
 # Naechelin
 2020년 3분기에 진행한 프로젝트로, React와 Spring으로 자신만의 맛집 지도를 만드는 서비스를 구현했다.
 
+[![HitCount](http://hits.dwyl.com/WOOSERK/WOOSERK/Naechelin.svg)](http://hits.dwyl.com/WOOSERK/WOOSERK/Naechelin)
+
 # 사용 기술
 ### Frontend
 <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white"/></a>
