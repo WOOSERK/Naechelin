@@ -1,0 +1,32 @@
+.UserAppHeader {
+	background-color: #ffc0c0;
+	height: 5em;
+	border-left: 1px solid rgb(111, 10, 10);
+	border-right: 1px solid rgb(228, 224, 224);
+	overflow: hidden;
+}
+#faBars {
+	float: left;
+	margin-top: 3%;
+	margin-left: 2%;
+}
+#logo {
+	float: left;
+	margin-top: -10px;
+	margin-left: 31%;
+	width: 100px;
+}
+#QRcode {
+	float: right;
+	z-index: 10px;
+}
+.UserAppHeader #bookMark {
+	float: left;
+	margin-left: 90px;
+}
+.UserAppHeader #bell {
+	float: right;
+	margin-top: 3%;
+	margin-right: 2%;
+	width: 50px;
+}

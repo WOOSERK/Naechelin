@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cf.naechelin.mapper.LikeyMapper" >
+    <insert id="insert" parameterType="Likey">
+        INSERT INTO likey VALUES(#{memberId}, #{storeId})
+    </insert>
+    <delete id="delete" parameterType="Likey">
+        DELETE FROM likey WHERE storeId=#{storeId} AND memberId=#{memberId}
+    </delete>
+    <select id="likeyStoreList" parameterType="Query" resultType="Naechelin">
+        select storeId,storeLatitude,storeLongitude from store inner join (select * from likey where memberId=#{intWord})as a using(storeId);
+    </select>
+</mapper>

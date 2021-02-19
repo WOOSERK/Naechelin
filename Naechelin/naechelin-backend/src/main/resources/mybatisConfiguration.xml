@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE configuration PUBLIC
+        "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <typeAliases>
+        <typeAlias type="cf.naechelin.vo.LikeyVO" alias="Likey"/>
+        <typeAlias type="cf.naechelin.vo.MemoVO" alias="Memo"/>
+        <typeAlias type="cf.naechelin.vo.ReviewVO" alias="Review"/>
+        <typeAlias type="cf.naechelin.vo.QueryVO" alias="Query"/>
+        <typeAlias type="cf.naechelin.vo.StoreVO" alias="Store"/>
+        <typeAlias type="cf.naechelin.vo.StoreStateVO" alias="StoreState"/>
+        <typeAlias type="cf.naechelin.vo.StoreTypeVO" alias="StoreType"/>
+        <typeAlias type="cf.naechelin.vo.PolicyVO" alias="Policy"/>
+        <typeAlias type="cf.naechelin.vo.MemberVO" alias="Member"/>
+        <typeAlias type="cf.naechelin.vo.MemberTypeVO" alias="MemberType"/>
+        <typeAlias type="cf.naechelin.vo.QuestionVO" alias="Question"/>
+        <typeAlias type="cf.naechelin.vo.AnswerVO" alias="Answer"/>
+        <typeAlias type="cf.naechelin.vo.LineVO" alias="Line"/>
+        <typeAlias type="cf.naechelin.vo.MissionVO" alias="Mission"/>
+        <typeAlias type="cf.naechelin.vo.CouponVO" alias="Coupon"/>
+        <typeAlias type="cf.naechelin.vo.ReviewVO" alias="Review"/>
+        <typeAlias type="cf.naechelin.vo.NaechelinStarVO" alias="Naechelin"/>
+        <typeAlias type="cf.naechelin.vo.VisitVO" alias="Visit"/>
+    </typeAliases>
+</configuration>

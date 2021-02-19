@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cf.naechelin.mapper.QuestionMapper">
+    <insert id="insert" parameterType="Question">
+        INSERT INTO question (questionTitle, questionContent, questionWriteDate)
+        VALUES (#{questionTitle}, #{questionContent}, CURRENT_TIMESTAMP)
+    </insert>
+    <update id="update" parameterType="Question">
+        UPDATE question SET questionTitle=#{questionTitle}, questionContent=#{questionContent}
+        WHERE questionId=#{questionId}
+    </update>
+    <delete id="delete" parameterType="java.lang.Integer">
+        DELETE FROM question WHERE questionId=#{questionId}
+    </delete>
+    <select id="selectByQuestionTitle" parameterType="java.lang.String">
+        SELECT * FROM question WHERE questionTitle=#{questionTitle}
+    </select>
+    <select id="selectByQuestionContent" parameterType="java.lang.String">
+        SELECT * FROM question WHERE questionContent LIKE CONCAT('%', #{questionContent}, '%')
+    </select>
+    <select id="list">
+        SELECT * FROM question ORDER BY questionId
+    </select>
+</mapper>

@@ -1,0 +1,125 @@
+.Line #search {
+	margin-top: 10px;
+	margin-left: 10px;
+	padding-left: 10px;
+	width: 85%;
+	height: 25px;
+}
+
+.Line #searchBtn {
+	margin-top: 10px;
+}
+
+.Line #stampPaper {
+	margin-left: -20px;
+	width: 75%;
+	border-radius: 5px;
+}
+
+.Line #flag {
+	/*이걸로 깃발 위치 변경*/
+	left: 330px;
+	top: 60px;
+	/*                    */
+	width: 30px;
+	position: absolute;
+	z-index: 1000;
+}
+
+.Line .LineCurrent {
+	border-radius: 5px;
+	font-size: 14px;
+	text-align: left;
+	padding: 5px;
+	margin-left: 10%;
+	border: 1px solid rgb(189, 185, 185);
+	background-color: white;
+	height: 40px;
+	width: 75%;
+}
+
+.Line #LineEdit {
+	position: absolute;
+	z-index: 1000;
+	top: 230px;
+	right: 90px;
+	float: right;
+	color: rgb(54, 54, 54);
+	border-radius: 100px;
+	width: 90px;
+	height: 30px;
+	border: 1px solid rgb(214, 214, 214);
+
+	padding: 5px;
+	font-size: 12px;
+
+	background-color: #ffffd6;
+	box-shadow: 1px 1px 2px gray;
+}
+.Line span {
+	float: left;
+	border: 1px solid rgb(220, 220, 220);
+	border-bottom: none;
+	padding: 4px;
+}
+
+.Line #goBack {
+	float: left;
+	margin-left: 15px;
+	color: rgb(54, 54, 54);
+	border-radius: 100px;
+	width: 90px;
+	height: 30px;
+	border: 1px solid rgb(214, 214, 214);
+	padding: 5px;
+	font-size: 12px;
+
+	background-color: #ffffd6;
+	box-shadow: 1px 1px 2px gray;
+	text-align: center;
+	padding-top: 7px;
+	display: none;
+}
+.Line #toDoLabel {
+	float: left;
+	margin-left: 15px;
+	margin-top: 6px;
+	display: none;
+	margin-bottom: 11px;
+}
+.Line .LinkTab {
+	float: left;
+	color: black;
+	background-color: #ffffb6;
+	padding: 10px;
+	margin-left: 1px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	display: inline;
+}
+
+.Line #visitTab {
+	background-color: rgb(207, 255, 159);
+}
+.Line #historyTab {
+	background-color: #ffffb6;
+}
+
+.Line ol {
+	left: -200px;
+	height: 230px;
+	width: 100%;
+	max-height: 230px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+.Line ol {
+	scrollbar-width: none;
+	scroll-behavior: smooth;
+	-ms-overflow-style: none;
+}
+.Line ol::-webkit-scrollbar {
+	scroll-behavior: smooth;
+	display: none;
+}

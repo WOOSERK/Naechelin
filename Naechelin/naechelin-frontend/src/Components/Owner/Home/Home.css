@@ -1,0 +1,18 @@
+.Home {
+	max-height: 570px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+}
+
+.Home #knife {
+	position: absolute;
+	width: 35px;
+	top: 275px;
+	left: 220px;
+}
+
+.Home::-webkit-scrollbar {
+	display: none;
+}

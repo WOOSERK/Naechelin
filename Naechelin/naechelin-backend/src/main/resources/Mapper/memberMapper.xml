@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cf.naechelin.mapper.MemberMapper">
+    <insert id="insert" parameterType="Member">
+        INSERT INTO member (memberEmail, memberPass, memberNick, memberBirth, memberGender, memberType, memberRegDate, memberTel)
+        VALUES (#{memberEmail}, #{memberPass}, #{memberNick}, #{memberBirth}, #{memberGender}, #{memberType}, CURRENT_TIMESTAMP, #{memberTel})
+    </insert>
+    <update id="update" parameterType="Member">
+        UPDATE member SET memberPass=PASSWORD(#{memberPass}), memberNick=#{memberNick}, memberBirth=#{memberBirth}, memberGender=#{memberGender}, memberType=#{memberType}, memberTel=#{memberTel}
+        WHERE memberEmail=#{memberEmail}
+    </update>
+    <update id="delete" parameterType="Member">
+        UPDATE member SET memberEndDate=CURRENT_TIMESTAMP WHERE memberEmail=#{memberEmail}
+    </update>
+    <select id="selectByMemberEmail" parameterType="java.lang.String" resultType="Member">
+        SELECT * FROM member WHERE memberEmail=#{memberEmail}
+    </select>
+    <select id="selectByMemberNick" parameterType="java.lang.String" resultType="Member">
+        SELECT * FROM member WHERE memberNick=#{memberNick}
+    </select>
+    <select id="list" resultType="Member">
+        SELECT * FROM member ORDER BY memberEmail
+    </select>
+    <select id="login" parameterType="java.lang.String" resultType="Member">
+        SELECT * FROM member WHERE memberEmail=#{memberEmail} AND memberPass=#{memberPass}
+    </select>
+</mapper>

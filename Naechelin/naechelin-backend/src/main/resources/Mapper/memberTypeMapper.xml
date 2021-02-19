@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cf.naechelin.mapper.MemberTypeMapper">
+    <select id="selectByMemberTypeMember" parameterType="MemberType">
+        SELECT * FROM memberType ORDER BY memberTypeName
+    </select>
+    <select id="insert" parameterType="MemberType">
+        INSERT INTO memberType VALUES (#{memberType}, #{memberTypeName})
+    </select>
+    <update id="update" parameterType="MemberType">
+        UPDATE memberType SET memberTypeName=#{MemberTypeName}
+        WHERE memberType=#{memberType}
+    </update>
+    <delete id="delete" parameterType="java.lang.String">
+        DELETE FROM memberType WHERE memberTypeName=${memberTypeName}
+    </delete>
+</mapper>

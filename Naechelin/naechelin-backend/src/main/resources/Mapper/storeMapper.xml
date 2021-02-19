@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cf.naechelin.mapper.StoreMapper">
+    <insert id="insertRequest" parameterType="Store">
+        INSERT INTO store VALUES (default, #{memberId}, #{storeBusinessNum}, #{storeName}, #{storeTypeType},
+        storeStateType = 'REGISTER_REQ', #{storeAddress}, #{storeAddressDetail}, #{storeOwner}, #{storeTel}, #{storeFax},
+         #{storeLatitude}, #{storeLongitude}, #{storeEndDate}, #{storeRegDate})
+    </insert>
+
+    <update id="insert" parameterType="Store">
+        UPDATE store SET storeStateType = 'REGISTER' WHERE storeId = #{storeId}
+    </update>
+
+    <update id="updateRequest" parameterType="Store">
+        UPDATE store SET storeBusinessNum = #{storeBusinessNum},
+        storeName = #{storeName}, storeTypeType = #{storeTypeType},
+        storeStateType = 'UPDATE_REQ', storeAddress = #{storeAddress}, storeAddressDetail = #{storeAddressDetail},
+        storeOwner = #{storeOwner}, storeTel = #{storeTel}, storeFax = #{storeFax},
+        storeLatitude = #{storeLatitude}, storeLongitude = #{storeLongitude}
+        WHERE storeId = #{storeId}
+    </update>
+
+    <update id="update" parameterType="Store">
+        UPDATE store SET storeStateType = 'REGISTER' WHERE storeId = #{storeId}
+    </update>
+
+    <update id="deleteRequest" parameterType="Store">
+        UPDATE store SET storeStateType = 'DELETE_REQ' WHERE storeId = #{storeId}
+    </update>
+
+    <update id="delete" parameterType="Store">
+        UPDATE store SET storeEndDate = CURRENT_TIMESTAMP, storeStateType = 'DELETED' WHERE storeId = #{storeId}
+    </update>
+
+    <select id="view" parameterType="Store" resultType="Store">
+        SELECT * FROM store WHERE storeId = #{storeId}
+    </select>
+
+    <select id="listByStoreTypeType" parameterType="StoreType" resultType="Store">
+        SELECT * FROM store WHERE storeTypeType = #{storeTypeType}
+    </select>
+
+    <select id="listByStoreStateType" parameterType="StoreState" resultType="Store">
+        SELECT * FROM store WHERE storeStateType = #{storeStateType}
+    </select>
+
+    <select id="listByMemberId" parameterType="Member" resultType="Store">
+        SELECT * FROM store WHERE memberId =#{memberId}
+    </select>
+
+    <select id="howManyVisits" parameterType="Store" resultType="Visit">
+       SELECT storeId, missionSuccessTime from  store inner join mission using (storeId) where missionSuccessTime > current_date() and storeId = #{storeId};
+    </select>
+</mapper>

@@ -1,0 +1,50 @@
+.Coupon {
+	max-height: 590px;
+}
+.Coupon span {
+	padding: 4px;
+	border: 1px solid rgb(220, 220, 220);
+	border-bottom: none;
+}
+.Coupon .CouponTab {
+	float: left;
+	color: black;
+	padding: 10px;
+	margin-left: 1px;
+	margin-top: 10px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+.Coupon #availTab {
+	background-color: rgb(207, 255, 159);
+}
+.Coupon #historyTab {
+	background-color: #ffffb6;
+}
+.Coupon ol {
+	height: 570px;
+	max-height: 570px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	margin-left: -40px;
+	margin-top: 20px;
+}
+
+.Coupon ol {
+	scrollbar-width: none;
+	scroll-behavior: smooth;
+	-ms-overflow-style: none;
+}
+.Coupon ol::-webkit-scrollbar {
+	scroll-behavior: smooth;
+	display: none;
+}
+
+.Coupon .CouponShow {
+	float: left;
+	width: 100%;
+	margin-left: 10px;
+	margin-top: -10px;
+	padding: 10px;
+}

@@ -1,0 +1,6 @@
+{
+	"editor.wordWrap": "on",
+	"editor.formatOnSave": true,
+	"javascript.format.placeOpenBraceOnNewLineForControlBlocks": true,
+    "javascript.format.placeOpenBraceOnNewLineForFunctions": true
+}

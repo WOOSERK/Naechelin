@@ -1,0 +1,74 @@
+#spoon {
+	float: left;
+	margin-left: 210px;
+	margin-top: 80px;
+	height: 500px;
+}
+#fork {
+	float: right;
+	margin-right: 330px;
+	margin-top: 35px;
+	height: 550px;
+}
+
+.App {
+	position: absolute;
+	z-index: 100;
+	text-align: center;
+	left: 30%;
+	min-width: 34%;
+	max-width: 34%;
+	right: 33%;
+	background-color: rgb(255, 255, 255);
+	height: 720px;
+	border-left: 40px solid brown;
+	border-right: 10px solid rgb(252, 252, 230);
+
+	-webkit-transform: rotateY(-10deg) translateZ(10px);
+	-moz-transform: rotateY(-10deg) translateZ(10px);
+	transform: rotateY(-10deg) translateZ(10px);
+	border-image-slice: 1;
+	box-shadow: 10px 40px 10px 10px gray;
+}
+
+.App-logo {
+	height: 40vmin;
+	pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.App-logo {
+		animation: App-logo-spin infinite 20s linear;
+	}
+}
+
+.App-header {
+	background-color: #282c34;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
+}
+
+.App-link {
+	color: black;
+}
+
+@keyframes App-logo-spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+.middle {
+	position: relative;
+	min-height: 100px;
+}
+.footer {
+	position: relavive;
+}

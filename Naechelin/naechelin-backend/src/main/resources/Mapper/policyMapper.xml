@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cf.naechelin.mapper.PolicyMapper">
+    <insert id="insert" parameterType="Policy">
+        INSERT INTO policy VALUES storeId = #{storeId}, policyDay = #{policyDay}, policyContent = #{policyContent}
+    </insert>
+
+    <update id="update" parameterType="Policy">
+        UPDATE policy SET policyDay = #{policyDay}, policyContent = #{policyContent} WHERE storeId = #{storeId}
+    </update>
+
+    <delete id="delete" parameterType="Policy">
+        DELETE FROM policy WHERE storeId = #{storeId}
+    </delete>
+
+    <select id="view" parameterType="Policy" resultType="Policy">
+        SELECT * FROM policy WHERE storeId = #{storeId}
+    </select>
+
+    <select id="list" parameterType="Policy" resultType="java.util.List">
+        SELECT * FROM policy WHERE policyDay = #{policyDay}
+    </select>
+</mapper>

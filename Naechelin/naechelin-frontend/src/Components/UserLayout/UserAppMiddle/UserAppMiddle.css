@@ -1,0 +1,8 @@
+.UserAppMiddle {
+	min-height: 590px;
+	max-height: 590px;
+	overflow: hidden;
+	border-left: 1px solid rgb(111, 10, 10);
+	border-right: 1px solid rgb(228, 224, 224);
+	background-image: url("/images/pattern2.png");
+}

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cf.naechelin.mapper.ReviewMapper" >
+   <insert id="insert" parameterType="Review">
+       INSERT INTO review VALUES(#{lineId},#{storeId},#{reviewPac},#{reviewPhoto},#{reviewRating})
+   </insert>
+    <delete id="delete" parameterType="Review">
+        DELETE FROM review WHERE lineId=#{lineId} AND storeId=#{storeId}
+    </delete>
+    <select id="viewDetail" parameterType="Review" resultType="Review">
+        SELECT * FROM review WHERE lineId=#{lineId} AND storeId=#{storeId}
+    </select>
+    <select id="reviewList" parameterType="Query" resultType="Review">
+        SELECT lineId,storeId,reviewPac,reviewPhoto,reviewRating,memberNick as writer from member inner join (SELECT lineId,storeId,reviewPac,reviewPhoto,reviewrating,memberId FROM review inner join line using(lineId) where storeId=#{intWord})  as b USING(memberId);
+    </select>
+    <select id="myNaechelinList" parameterType="Query" resultType="Naechelin">
+        SELECT reviewRating-5, storeLatitude,storeLongitude FROM store INNER JOIN (SELECT storeId,reviewRating FROM review INNER JOIN line USING(lineId) WHERE reviewRating <![CDATA[ > ]]> 5 AND memberId = #{intWord}) AS A USING(storeId)
+    </select>
+    <select id="guideList" resultType="Naechelin">
+        SELECT storeId,b.reviewRating as reviewRating,storeLatitude,storeLongitude FROM store INNER JOIN ( SELECT storeId,avg(reviewRating) as reviewRating FROM review GROUP BY storeId ) AS b USING (storeId) WHERE reviewRating <![CDATA[ > ]]> 5
+    </select>
+    <select id="insertCheck" parameterType="Review" resultType="Mission">
+        SELECT lineId, storeId, missionOrder, missionSuccessTime FROM line INNER JOIN mission USING(lineId) WHERE lineId=#{lineId} AND storeId=#{storeId} ORDER BY missionSuccessTime DESC limit 1
+    </select>
+    <select id="findLineId" parameterType="java.lang.Integer" resultType="java.lang.Integer">
+        SELECT lineId FROM line WHERE memberId=#{memberId} ORDER BY lineCreateTime DESC limit 1
+    </select>
+    <update id="reviewEdit" parameterType="Review">
+        UPDATE review set reviewPac=#{reviewPac},reviewRating=#{reviewRating},reviewPhoto=#{reviewPhoto} WHERE lineId=#{lineId AND storeId=#{storeId}
+    </update>
+</mapper>

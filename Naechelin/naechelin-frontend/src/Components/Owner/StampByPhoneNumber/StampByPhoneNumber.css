@@ -1,0 +1,63 @@
+.StampByPhoneNumber {
+	position: absolute;
+	text-align: center;
+	overflow: visible;
+	background-color: white;
+	height: 725px;
+	width: 120%;
+	z-index: 1000;
+	margin-left: -50px;
+	margin-top: -85px;
+}
+
+.StampByPhoneNumber #goBack {
+	position: relative;
+	float: left;
+	margin-left: 10px;
+	margin-top: -70px;
+	z-index: 10000;
+}
+.StampByPhoneNumber h1 {
+	margin-top: 110px;
+	margin-left: 15px;
+}
+
+.StampByPhoneNumber #phoneIcon {
+	margin-right: 10px;
+}
+.StampByPhoneNumber input {
+	font-size: 18px;
+	padding: 10px;
+	margin-top: 30px;
+	height: 40px;
+	width: 60%;
+	margin-bottom: 20px;
+}
+
+.StampByPhoneNumber .keyPad button {
+	font-size: 15px;
+	border-radius: 100%;
+	border: none;
+	margin: 10px;
+	width: 60px;
+	height: 60px;
+}
+
+.StampByPhoneNumber .confirmButtons {
+	margin-top: 20px;
+}
+.StampByPhoneNumber .confirmButtons button {
+	font-size: 17px;
+	width: 160px;
+	height: 50px;
+	margin: 10px;
+	margin-left: 10px;
+	border-radius: 5px;
+	border: none;
+	background-color: rgb(255, 255, 184);
+}
+.StampByPhoneNumber #cancel {
+}
+.StampByPhoneNumber #confirm {
+	background-color: rgb(255, 225, 230);
+}

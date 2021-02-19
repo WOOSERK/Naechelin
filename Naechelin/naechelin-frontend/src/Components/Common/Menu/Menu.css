@@ -1,0 +1,8 @@
+.Menu {
+	position: absolute;
+	z-index: 100;
+	top: 0px;
+	background-color: black;
+	width: 50%;
+	height: 590px;
+}

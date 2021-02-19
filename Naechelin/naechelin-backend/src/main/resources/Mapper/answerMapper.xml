@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC
+        "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="cf.naechelin.mapper.AnswerMapper">
+    <insert id="insert" parameterType="Answer">
+        INSERT INTO answer (answerContent, answerWriteDate) VALUES (#{answerContent}, #{answerWriteDate})
+    </insert>
+    <delete id="delete" parameterType="Answer">
+        DELETE FROM answer WHERE questionId=#{questionId}
+    </delete>
+    <select id="selectByAnswerContent" parameterType="Answer">
+        SELECT * FROM answer WHERE answerContent LIKE CONCAT('%', #{answerContent}, '%')
+    </select>
+</mapper>

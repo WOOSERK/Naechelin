@@ -1,0 +1,16 @@
+.UserAppFooter {
+	position: relative;
+	height: 100%;
+	background-color: rgb(238, 238, 238);
+	overflow: hidden;
+	border-left: 1px solid rgb(111, 10, 10);
+	border-right: 1px solid rgb(228, 224, 224);
+}
+.UserAppFooter button {
+	position: relative;
+	width: 30%;
+	height: 50px;
+	max-height: 10%;
+	border: none;
+	background-color: rgb(238, 238, 238);
+}

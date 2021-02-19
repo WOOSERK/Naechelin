@@ -1,0 +1,65 @@
+.CouponAvailable li {
+	list-style: none;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.4);
+	margin-bottom: 18px;
+}
+
+.CouponAvailable #popUpBackground {
+	position: absolute;
+	z-index: 100;
+	background-color: rgba(0, 0, 0, 0.4);
+	float: right;
+	height: 592px;
+	top: 0px;
+	width: 99.5%;
+	left: 1px;
+	max-height: 590px;
+	visibility: hidden;
+}
+.CouponAvailable #popUp {
+	position: absolute;
+	z-index: 100000;
+	background-color: rgba(255, 255, 255, 0.667);
+	border-radius: 1px;
+	width: 400px;
+	height: 400px;
+	padding: 15px;
+	visibility: visible;
+	border-radius: 50%;
+
+	animation-iteration-count: 1;
+	visibility: hidden;
+}
+.CouponAvailable #quit {
+	color: white;
+	position: absolute;
+	z-index: 10000;
+	left: 400px;
+	top: 100px;
+	font-size: 22px;
+	visibility: hidden;
+}
+.CouponAvailable #QRcode {
+	position: relative;
+	float: left;
+	left: 25%;
+	top: 10%;
+	z-index: 200000;
+	border-radius: 5px;
+	margin-top: 50px;
+}
+@keyframes rotating {
+	0% {
+		transform: rotateY(0deg);
+	}
+	30% {
+		transform: rotateY(120deg);
+	}
+	50% {
+		transform: rotateY(180deg);
+	}
+	100% {
+		transform: rotateY(360deg);
+	}
+}

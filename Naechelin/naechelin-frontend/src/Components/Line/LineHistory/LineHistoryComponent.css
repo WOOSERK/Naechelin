@@ -1,0 +1,31 @@
+.LineHistoryComponent {
+	height: 125px;
+	margin-bottom: 20px;
+	padding-top: 20px;
+	background-color: rgba(255, 255, 255, 0.4);
+	border-top: 1px solid rgb(174, 174, 174);
+	border-bottom: 1px solid rgb(174, 174, 174);
+	/*border-top: 2px solid rgb(174, 162, 162);
+	border-bottom: 2px solid rgb(174, 162, 162);*/
+	text-align: left;
+}
+.LineHistoryComponent img {
+	float: left;
+	width: 103px;
+	height: 95px;
+	margin-left: 10px;
+	margin-top: -5px;
+	border-radius: 5px;
+}
+.LineHistoryComponent #lineInfo {
+	float: left;
+	margin-left: 50px;
+	font-size: 15px;
+}
+
+.LineHistoryComponent #lineAcheive {
+	position: relative;
+	float: right;
+	margin-right: 10px;
+	margin-top: 10px;
+}

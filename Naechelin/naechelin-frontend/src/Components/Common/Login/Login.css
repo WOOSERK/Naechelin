@@ -1,0 +1,110 @@
+.Login {
+	position: absolute;
+	top: 20%;
+	left: 10%;
+	font-size: 20px;
+	width: 80%;
+	padding: 10px;
+}
+.Login #paper {
+	float: left;
+	position: absolute;
+	left: 20px;
+	top: 0px;
+	width: 350px;
+	height: 200px;
+	z-index: 0;
+	background-color: white;
+	border: 1px solid rgb(208, 208, 208);
+}
+.Login .idDiv {
+	position: relative;
+	z-index: 10;
+	top: 10px;
+	color: rgb(90, 90, 90);
+	margin-left: 0px;
+}
+
+.Login .pwdDiv {
+	position: relative;
+	z-index: 10;
+	top: 10px;
+	color: rgb(90, 90, 90);
+}
+
+.Login #idLabel {
+	margin-right: 20px;
+}
+
+.Login #id {
+	background-color: rgba(255, 255, 255, 0);
+	border: none;
+	border-bottom: 1px solid rgb(181, 181, 181);
+	padding: 10px;
+	width: 240px;
+}
+.Login #pwdLabel {
+	margin-right: 10px;
+}
+.Login #pwd {
+	left: -130px;
+	background-color: rgba(255, 255, 255, 0);
+	border: none;
+	border-bottom: 1px solid rgb(181, 181, 181);
+	padding: 10px;
+
+	width: 200px;
+}
+
+.Login .Account {
+	left: -100px;
+	top: 10px;
+	font-size: 13px;
+	position: relative;
+	color: rgb(155, 155, 155);
+	z-index: 100;
+	padding: 20px;
+	width: 80%;
+}
+.Login #AccountRegister {
+	position: absolute;
+	z-index: 1000;
+	width: 50%;
+}
+
+.Login #AccountRegister:hover {
+	color: pink;
+}
+
+.Login #AccountFind {
+	position: absolute;
+	float: right;
+	margin-right: 10px;
+	margin-left: 160px;
+	width: 50%;
+	z-index: 1000;
+}
+.Login #AccountFind:hover {
+	color: pink;
+}
+
+.Login button {
+	border: none;
+	border-radius: 5px;
+	padding: 10px;
+	width: 150px;
+	height: 45px;
+	margin-right: 25px;
+	left: 18px;
+	position: relative;
+	top: 30px;
+	z-index: 10;
+}
+
+.Login #cancel {
+	background-color: #ffffa6;
+}
+
+.Login #confirm {
+	background-color: rgb(255, 217, 223);
+}
