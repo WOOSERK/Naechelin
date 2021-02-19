@@ -1,7 +1,7 @@
 # Naechelin
-2020년 3분기에 진행한 프로젝트로, React와 Spring으로 자신만의 맛집 지도를 만드는 서비스를 구현했다.
+2020년 3분기에 진행한 프로젝트로, **React**와 **Spring**으로 자신만의 맛집 지도를 만드는 서비스를 구현했다.
 
-[![HitCount](http://hits.dwyl.com/WOOSERK/WOOSERK/Naechelin.svg)](http://hits.dwyl.com/WOOSERK/WOOSERK/Naechelin)
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FWOOSERK%2FNaechelin&count_bg=%2379C83D&title_bg=%23555555&icon=furrynetwork.svg&icon_color=%23FFFFFF&title=Naechelin&edge_flat=true)](https://hits.seeyoufarm.com)
 
 # 사용 기술
 ### Frontend
@@ -18,14 +18,12 @@
 ### Database
 <img src="https://img.shields.io/badge/MariaDB-003545?style=flat-square&logo=MariaDB&logoColor=white"/></a>
 
-### Web server
+### etc.
 <img src="https://img.shields.io/badge/ApacheTomcat-F8DC75?style=flat-square&logo=Apache&nbspTomcat&logoColor=white"/></a>
-
-### Project management
 <img src="https://img.shields.io/badge/ApacheMaven-C71A36?style=flat-square&logo=Apache&nbspMaven&logoColor=white"/></a>
 
-### 사용한 API
+### API
 - 카카오맵 API
-- QR 코드 생성 API *ZXING*
+- QR 코드 생성 API **ZXING**
 - SMTP
 
